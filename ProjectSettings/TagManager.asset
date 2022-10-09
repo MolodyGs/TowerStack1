@@ -7,6 +7,9 @@ TagManager:
   - Platform
   - Building
   - GameOver
+  - Prefab
+  - Up
+  - Down
   layers:
   - Default
   - TransparentFX
