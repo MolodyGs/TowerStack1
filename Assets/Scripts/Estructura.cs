@@ -11,6 +11,7 @@ public class Estructura : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) 
     {
+        ScoreManager.instance.AddPoint();
 
         if(other.gameObject.name.Equals("EstructuraR(Clone)"))      //Comprueba si la estructura colisionó con otra estructura.
         {

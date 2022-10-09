@@ -9,13 +9,15 @@ using UnityEngine.UI;
 //--->3. Controla el efecto de que la camara se mueva hacia arriba (Aunque no es así en realidad, las estructuras son las que se mueven).
 public class GameController : MonoBehaviour
 {
-
+    
+    public static GameController instance;
     public GameObject Estructura_Grua;      //Referencia de la grua.
     public GameObject Padre;                //Referencia al gameobject "Estructuras" en la jerarquia.
     public GameObject Prefab;               //Prefab de una estructura.
     private GameObject EstructuraAux;       //Estrucutra creada a la semejanza de un prefab.
 
     bool space;                             //Controla cuando hayamos dejado cae un objeto con el espacio (space)
+    
 
     //Espera 0.75 segundos, luego de esto el jugador podrá dejar caer otra estructura.
     IEnumerator Time()                      
@@ -47,6 +49,8 @@ public class GameController : MonoBehaviour
         
     }
     //Verifica si el espacio ha sido presionado, creando una figura si es que se presiona.
+
+    
     void Update()
     {
         
@@ -71,4 +75,5 @@ public class GameController : MonoBehaviour
 
     }
 
+   
 }

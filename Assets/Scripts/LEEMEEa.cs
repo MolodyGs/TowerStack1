@@ -18,13 +18,6 @@ public class LEEMEEa : MonoBehaviour
     [2] Crear una ventana al perder la partida.
     |-----► Un panel, en la escena de "game", que nos de la opción de reintentar la partida o volver al menú.
 
-    [3] Crear puntuación, controlar y guardar la puntuación más alta.
-    |-----► Con respecto a la puntuación no hay nada hecho, así que puedes programarlo como lo veamos mejor.
-    |-----► Luego de cierta puntuación, el sprite de las estructuras que sale desde la grua cambiará, puedes usar cualquier sprite para simular el cambio. 
-    |-----| El domingo haré los sprites de las distintas estructuras.
-    |-----► La puntuación tiene que ser visible mientras jugamos.
-    |-----► Lee la nota que está al final para esta sección.
-
     [4] Particulas cuando las estructuras caen.
     |-----► Cuando la estructura haya caido en el centro, sería bacan que hubiera un efecto de particulas (Así como en minecraft que se crean particulas en el suelo cuando corres).
     |-----| Podrías ver como lo hacen en Minecraft para tenerlo de referencia.
