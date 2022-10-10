@@ -16,8 +16,9 @@ public class Detector : MonoBehaviour
 
         if(other.gameObject.tag.Equals("Up"))           
         {
-
-            SceneManager.LoadScene("Menu");  //Cargamos la scena "Menu" (Falta en realidad cargar un panel donde podamos elegir entre ir al menú o volver a intentarlo).
+            
+            GameController.instance.GameOver();
+            //SceneManager.LoadScene("Menu");  //Cargamos la scena "Menu" (Falta en realidad cargar un panel donde podamos elegir entre ir al menú o volver a intentarlo).
 
         }
 

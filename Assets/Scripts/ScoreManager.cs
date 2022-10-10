@@ -15,7 +15,12 @@ public class ScoreManager : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+        if(instance == null){
+            Debug.Log("Creando instancia");
+            instance = this;
+            return;
+        }
+        Debug.Log("fuera del if");
     }
     void Start()
     {
