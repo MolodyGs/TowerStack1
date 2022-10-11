@@ -26,21 +26,21 @@ public class GameController : MonoBehaviour
     private Vector3 posicionCamara;
     public GameObject PantallaGameOver;
 
+    private Animator prefabAnimator;
+
     bool space;                             //Controla cuando hayamos dejado cae un objeto con el espacio (space)
     
 
     private void Awake() {
 
-        if(instance == null){
-            instance = this;
+        if(instance != null){
+
+            Destroy(this.transform.gameObject);
 
         }
-        else
-        {
 
-            Destroy(this);
-
-        }
+        instance = this;
+        
         posiciciont0 = 0;
         posiciciont1 = 1;
         this.posicionCamara = camara.transform.position;
@@ -84,8 +84,8 @@ public class GameController : MonoBehaviour
                 //La camara se mueve hasta la posicion inicial
                 while(true)
                 {
-                    Debug.Log(posicionCamara[1]);
-                    Debug.Log("camara" + camara.transform.position.y);
+                    //Debug.Log(posicionCamara[1]);
+                    //Debug.Log("camara" + camara.transform.position.y);
                     if(camara.transform.position.y == posicionCamara[1])
                     {           
                         break;
@@ -103,7 +103,7 @@ public class GameController : MonoBehaviour
         
     }
 
-    //Verifica si el espacio ha sido presionado, creando una figura si es que se presiona.
+    //Verifica si "space" ha sido presionado, creando una figura si ese es el caso
     void Update()
     {
 
@@ -111,19 +111,27 @@ public class GameController : MonoBehaviour
         posiciciont0 = posiciciont1;
         posiciciont1 = Estructura_Grua.transform.parent.transform.position.x;
         diferencial = posiciciont1 - posiciciont0;
-
+    
         if(Input.GetKeyDown(KeyCode.Space) && !this.gameover)
         {
         
-            if(!this.space)     //Verifica si el espacio fue ya presionado antes.
+            if(!this.space && Estructura_Grua.activeSelf)     //Verifica si el espacio fue ya presionado antes.
             {
-
-                space = true;
                 
+                space = true;
+                int cont = 0;
+
+                int rng = Random.Range(1, 4);
+                
+
                 //Se crea una estructura a partir de un prefab (Encontrado en Assets-> prefab), La estructura se crea justo donde haya estado la estructura de la grua.
                 this.EstructuraAux = Instantiate(Prefab, Estructura_Grua.transform.position,Quaternion.identity);
-                this.EstructuraAux.GetComponent<Rigidbody2D>().AddForce(new Vector2(4000*diferencial, -1000));
+                this.EstructuraAux.GetComponent<Rigidbody2D>().AddForce(new Vector2(2000*diferencial, -1000));
                 this.EstructuraAux.transform.SetParent(Padre.transform);                                             //Hacemos que el objeto creado sea hijo del gameobject "Estructuras".
+
+                this.EstructuraAux.GetComponent<Animator>().SetInteger("Skin", rng);
+                this.EstructuraAux.transform.position = new Vector3(EstructuraAux.transform.position.x, EstructuraAux.transform.position.y, 10);
+                cont++;
 
                 this.Estructura_Grua.SetActive(false);                                                          //Desactivamos la estructura de la grua, para que esta sea visible.  
                 StartCoroutine(Time());                                                                         //Comienza la corrutina Time().

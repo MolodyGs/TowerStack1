@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 //Clase que controla el botón "Exit". Extiende de "Button"
 public class B_Exit : Button
@@ -21,10 +22,26 @@ public class B_Exit : Button
     override
     public void OnUp(){
 
+
             img.sprite = sprites[0];
             Press = false;
-            SettingsGameObj.SetActive(false);
-            Menu.SetActive(true);
+
+            if(SettingsGameObj.activeInHierarchy){
+
+                SettingsGameObj.SetActive(false);
+                Menu.SetActive(true);
+                return;
+
+            }
+            if(SceneManager.GetActiveScene().name.Equals("Menu"))
+            {
+
+                Debug.Log("Quit");
+                Application.Quit();
+                return;
+
+            }
+                        
             //rect.position = new Vector3(0, -1000, 0);      //Movemos el gameObject a la direccion inicial en la que estaba (Depende de en donde lo hayamos dejado en Unity)
             
     }
