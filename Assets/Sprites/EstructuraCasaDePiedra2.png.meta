@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 51d46870f5680ab4db407b99d87f49dc
+guid: 47c28c4a9b70adf4f972143a4fbe4cd5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -116,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Buttons_0
+      name: EstructuraCasaDePiedra2_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 132
-        width: 42
-        height: 22
+        y: 496
+        width: 96
+        height: 124
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f63b69f7a9fbf3d41bfeaae41d021b56
-      internalID: -567975019
+      spriteID: e4e7331496ade37478e410da9f1670ab
+      internalID: 40522493
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_1
+      name: EstructuraCasaDePiedra2_1
       rect:
         serializedVersion: 2
-        x: 42
-        y: 132
-        width: 42
-        height: 22
+        x: 96
+        y: 496
+        width: 96
+        height: 124
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d2207050e901b341b9b3bfbdf1e2a70
-      internalID: -1263669668
+      spriteID: 578be036f3bc9db4d868a5435324cc88
+      internalID: 746781834
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_2
+      name: EstructuraCasaDePiedra2_2
       rect:
         serializedVersion: 2
-        x: 84
-        y: 132
-        width: 42
-        height: 22
+        x: 192
+        y: 496
+        width: 96
+        height: 124
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +172,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b1a945bf9109e340b0aea3387dc5f3e
-      internalID: 168487553
+      spriteID: 3ccad945c76986f47a6e434df6c42fcd
+      internalID: 1077869943
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_3
+      name: EstructuraCasaDePiedra2_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 110
-        width: 42
-        height: 22
+        x: 288
+        y: 496
+        width: 96
+        height: 124
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cea614f781b94b46877ef47139b3df2
-      internalID: 1887672991
+      spriteID: 6444a5240439c0140a24df935150a494
+      internalID: 41618123
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_4
+      name: EstructuraCasaDePiedra2_4
       rect:
         serializedVersion: 2
-        x: 42
-        y: 110
-        width: 42
-        height: 22
+        x: 384
+        y: 496
+        width: 96
+        height: 124
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,104 +214,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d12c524acce1e44449d13391ca8ac30f
-      internalID: -420117939
+      spriteID: 281c6bc00fcc20140ac3742520f8363a
+      internalID: -2097962536
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_5
-      rect:
-        serializedVersion: 2
-        x: 84
-        y: 110
-        width: 42
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ab4f9d2ca32950d4d9591075146a0fa2
-      internalID: -1888539536
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Buttons_6
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 90
-        width: 14
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2b1c6981a5ff8dc49b66cde49033a993
-      internalID: -862738148
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Buttons_7
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 90
-        width: 14
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bb9fb6745352b134c95345ffa1349492
-      internalID: -155907492
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Buttons_8
-      rect:
-        serializedVersion: 2
-        x: 98
-        y: 90
-        width: 14
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dc3116319efa9924ea318470000d9e4f
-      internalID: -1296713258
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Buttons_9
+      name: EstructuraCasaDePiedra2_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 66
-        width: 42
-        height: 22
+        y: 372
+        width: 96
+        height: 124
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -319,20 +235,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 831b5aa297bea924ba64fc22cb81352a
-      internalID: -1348326158
+      spriteID: b072e386a1a00b74d9fd8767dbdc4fa0
+      internalID: -1641168351
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_10
+      name: EstructuraCasaDePiedra2_6
       rect:
         serializedVersion: 2
-        x: 42
-        y: 66
-        width: 42
-        height: 22
+        x: 96
+        y: 372
+        width: 96
+        height: 124
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -340,20 +256,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9aa24347564ac7448b7f74fcf5f82dd1
-      internalID: 1670298935
+      spriteID: a92223a5c40c7b14a9ce7734e07777eb
+      internalID: 1835629026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_11
+      name: EstructuraCasaDePiedra2_7
       rect:
         serializedVersion: 2
-        x: 84
-        y: 66
-        width: 42
-        height: 22
+        x: 192
+        y: 372
+        width: 96
+        height: 124
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -361,20 +277,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4375776bd3d23a4ba0323602614b886
-      internalID: -592321128
+      spriteID: 4b7ce5124c1a40a478bb70a0b6e8fd6b
+      internalID: 1369290064
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_12
+      name: EstructuraCasaDePiedra2_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 44
-        width: 42
-        height: 22
+        x: 288
+        y: 372
+        width: 96
+        height: 124
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -382,20 +298,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01b9dc0b301cb5c42a45df6a161c4146
-      internalID: 251250032
+      spriteID: 731adee1364cb2940bef64ec64bb3842
+      internalID: 602774558
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_13
+      name: EstructuraCasaDePiedra2_9
       rect:
         serializedVersion: 2
-        x: 42
-        y: 44
-        width: 42
-        height: 22
+        x: 384
+        y: 372
+        width: 96
+        height: 124
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -403,41 +319,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f12d8af1592caa4a834d5f160c44b08
-      internalID: -1282431938
+      spriteID: e3b35fa16c9d868428616b4e9ff80a7c
+      internalID: 1221664387
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_14
-      rect:
-        serializedVersion: 2
-        x: 84
-        y: 44
-        width: 42
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 26c2002b2f5687c40888a2db888262dd
-      internalID: 1844209984
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Buttons_15
+      name: EstructuraCasaDePiedra2_10
       rect:
         serializedVersion: 2
         x: 0
-        y: 22
-        width: 42
-        height: 22
+        y: 248
+        width: 96
+        height: 124
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -445,20 +340,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e1b9e4dd57f3b845982f81b484f00b0
-      internalID: 459084568
+      spriteID: 35f486cfb5d546c41a011dcde6901356
+      internalID: -356983209
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_16
+      name: EstructuraCasaDePiedra2_11
       rect:
         serializedVersion: 2
-        x: 42
-        y: 22
-        width: 42
-        height: 22
+        x: 96
+        y: 248
+        width: 96
+        height: 124
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -466,20 +361,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b01adf60f16aa5d4798a502a46c67bbe
-      internalID: -874616193
+      spriteID: 1a9180fa6b9c6424b893af33f057c43d
+      internalID: -1505075637
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_17
+      name: EstructuraCasaDePiedra2_12
       rect:
         serializedVersion: 2
-        x: 84
-        y: 22
-        width: 42
-        height: 22
+        x: 192
+        y: 248
+        width: 96
+        height: 124
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -487,20 +382,167 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 644abb40f718ba544b9b93bb21684171
-      internalID: -1278555417
+      spriteID: 644b84d91cf89d04d8eec48b3280f6f1
+      internalID: 887919765
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_18
+      name: EstructuraCasaDePiedra2_13
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 248
+        width: 96
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bba8870f06d831c4abd12982c5c8255e
+      internalID: -859909943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EstructuraCasaDePiedra2_14
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 248
+        width: 96
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0a49976bb1bd1848b8de41fce5a177b
+      internalID: -1250946219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EstructuraCasaDePiedra2_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 124
+        width: 96
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 148714402fc15ec479852e17cf0a90fa
+      internalID: -836346840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EstructuraCasaDePiedra2_16
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 124
+        width: 96
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd458b81ff0496e4a8bb8101cb2d52e1
+      internalID: -528460408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EstructuraCasaDePiedra2_17
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 124
+        width: 96
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92f0739f76d1c1543939f176af043f8b
+      internalID: -1924606593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EstructuraCasaDePiedra2_18
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 124
+        width: 96
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6e53d0c8d8d0314c88b43e395276ad0
+      internalID: -190903614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EstructuraCasaDePiedra2_19
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 124
+        width: 96
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f532d3b8cb322384e87b1263750c1cf0
+      internalID: 994780574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EstructuraCasaDePiedra2_20
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 42
-        height: 22
+        width: 96
+        height: 124
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -508,20 +550,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2144f1f073895640b750705c287867e
-      internalID: 927332176
+      spriteID: f0f141cbfe352a34c9454f1e926ed12e
+      internalID: -45705591
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_19
+      name: EstructuraCasaDePiedra2_21
       rect:
         serializedVersion: 2
-        x: 42
+        x: 96
         y: 0
-        width: 42
-        height: 22
+        width: 96
+        height: 124
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -529,29 +571,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb2f0ff48c33ed84295a7364d3d6833c
-      internalID: -1020791368
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Buttons_20
-      rect:
-        serializedVersion: 2
-        x: 84
-        y: 0
-        width: 42
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c49197280b411ce49909cca7361125ac
-      internalID: 1399094594
+      spriteID: c43e6d87c646c7842b86e07bf9dd608b
+      internalID: 745462725
       vertices: []
       indices: 
       edges: []
@@ -567,27 +588,28 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Buttons_18: 927332176
-      Buttons_3: 1887672991
-      Buttons_10: 1670298935
-      Buttons_2: 168487553
-      Buttons_17: -1278555417
-      Buttons_4: -420117939
-      Buttons_7: -155907492
-      Buttons_16: -874616193
-      Buttons_20: 1399094594
-      Buttons_15: 459084568
-      Buttons_6: -862738148
-      Buttons_19: -1020791368
-      Buttons_0: -567975019
-      Buttons_12: 251250032
-      Buttons_14: 1844209984
-      Buttons_5: -1888539536
-      Buttons_1: -1263669668
-      Buttons_13: -1282431938
-      Buttons_8: -1296713258
-      Buttons_9: -1348326158
-      Buttons_11: -592321128
+      EstructuraCasaDePiedra2_15: -836346840
+      EstructuraCasaDePiedra2_8: 602774558
+      EstructuraCasaDePiedra2_21: 745462725
+      EstructuraCasaDePiedra2_18: -190903614
+      EstructuraCasaDePiedra2_4: -2097962536
+      EstructuraCasaDePiedra2_9: 1221664387
+      EstructuraCasaDePiedra2_20: -45705591
+      EstructuraCasaDePiedra2_13: -859909943
+      EstructuraCasaDePiedra2_11: -1505075637
+      EstructuraCasaDePiedra2_6: 1835629026
+      EstructuraCasaDePiedra2_16: -528460408
+      EstructuraCasaDePiedra2_19: 994780574
+      EstructuraCasaDePiedra2_0: 40522493
+      EstructuraCasaDePiedra2_3: 41618123
+      EstructuraCasaDePiedra2_5: -1641168351
+      EstructuraCasaDePiedra2_1: 746781834
+      EstructuraCasaDePiedra2_10: -356983209
+      EstructuraCasaDePiedra2_7: 1369290064
+      EstructuraCasaDePiedra2_12: 887919765
+      EstructuraCasaDePiedra2_17: -1924606593
+      EstructuraCasaDePiedra2_14: -1250946219
+      EstructuraCasaDePiedra2_2: 1077869943
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

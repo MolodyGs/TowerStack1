@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 51d46870f5680ab4db407b99d87f49dc
+guid: 10b77b06868389341999740d589d97d3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -116,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Buttons_0
+      name: EstructuraCasaDePieraIamgenSola_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 132
-        width: 42
-        height: 22
+        y: 93
+        width: 24
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f63b69f7a9fbf3d41bfeaae41d021b56
-      internalID: -567975019
+      spriteID: 3b9a2915fe51ec049b4c1d89a9991f65
+      internalID: 1284151095
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_1
+      name: EstructuraCasaDePieraIamgenSola_1
       rect:
         serializedVersion: 2
-        x: 42
-        y: 132
-        width: 42
-        height: 22
+        x: 24
+        y: 93
+        width: 24
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d2207050e901b341b9b3bfbdf1e2a70
-      internalID: -1263669668
+      spriteID: 82755a2e64e99e54eac66cb408286302
+      internalID: -1646597640
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_2
+      name: EstructuraCasaDePieraIamgenSola_2
       rect:
         serializedVersion: 2
-        x: 84
-        y: 132
-        width: 42
-        height: 22
+        x: 48
+        y: 93
+        width: 24
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +172,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b1a945bf9109e340b0aea3387dc5f3e
-      internalID: 168487553
+      spriteID: 90bc720b36ff5454c97da081f3fe1e7d
+      internalID: 694711333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_3
+      name: EstructuraCasaDePieraIamgenSola_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 110
-        width: 42
-        height: 22
+        x: 72
+        y: 93
+        width: 24
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,125 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cea614f781b94b46877ef47139b3df2
-      internalID: 1887672991
+      spriteID: 1bdd39aaf5a47824e92fa0aeee4f4115
+      internalID: 565459514
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_4
-      rect:
-        serializedVersion: 2
-        x: 42
-        y: 110
-        width: 42
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d12c524acce1e44449d13391ca8ac30f
-      internalID: -420117939
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Buttons_5
-      rect:
-        serializedVersion: 2
-        x: 84
-        y: 110
-        width: 42
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ab4f9d2ca32950d4d9591075146a0fa2
-      internalID: -1888539536
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Buttons_6
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 90
-        width: 14
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2b1c6981a5ff8dc49b66cde49033a993
-      internalID: -862738148
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Buttons_7
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 90
-        width: 14
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bb9fb6745352b134c95345ffa1349492
-      internalID: -155907492
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Buttons_8
-      rect:
-        serializedVersion: 2
-        x: 98
-        y: 90
-        width: 14
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dc3116319efa9924ea318470000d9e4f
-      internalID: -1296713258
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Buttons_9
+      name: EstructuraCasaDePieraIamgenSola_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 66
-        width: 42
-        height: 22
+        y: 62
+        width: 24
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -319,20 +214,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 831b5aa297bea924ba64fc22cb81352a
-      internalID: -1348326158
+      spriteID: 1ad597b8642e74a44a54fb0391022c9e
+      internalID: 1645297622
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_10
+      name: EstructuraCasaDePieraIamgenSola_5
       rect:
         serializedVersion: 2
-        x: 42
-        y: 66
-        width: 42
-        height: 22
+        x: 24
+        y: 62
+        width: 24
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -340,20 +235,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9aa24347564ac7448b7f74fcf5f82dd1
-      internalID: 1670298935
+      spriteID: 07e051c6ffcef3848ba5dd965705b28c
+      internalID: 834946570
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_11
+      name: EstructuraCasaDePieraIamgenSola_6
       rect:
         serializedVersion: 2
-        x: 84
-        y: 66
-        width: 42
-        height: 22
+        x: 48
+        y: 62
+        width: 24
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -361,20 +256,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4375776bd3d23a4ba0323602614b886
-      internalID: -592321128
+      spriteID: 4baf59600be233645852c08bb1f6193b
+      internalID: 1629334934
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_12
+      name: EstructuraCasaDePieraIamgenSola_7
       rect:
         serializedVersion: 2
-        x: 0
-        y: 44
-        width: 42
-        height: 22
+        x: 72
+        y: 62
+        width: 24
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -382,62 +277,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01b9dc0b301cb5c42a45df6a161c4146
-      internalID: 251250032
+      spriteID: 2dec59e9b94641d4dbf81b9128138d74
+      internalID: -904171070
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_13
-      rect:
-        serializedVersion: 2
-        x: 42
-        y: 44
-        width: 42
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f12d8af1592caa4a834d5f160c44b08
-      internalID: -1282431938
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Buttons_14
-      rect:
-        serializedVersion: 2
-        x: 84
-        y: 44
-        width: 42
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 26c2002b2f5687c40888a2db888262dd
-      internalID: 1844209984
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Buttons_15
+      name: EstructuraCasaDePieraIamgenSola_8
       rect:
         serializedVersion: 2
         x: 0
-        y: 22
-        width: 42
-        height: 22
+        y: 31
+        width: 24
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -445,20 +298,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e1b9e4dd57f3b845982f81b484f00b0
-      internalID: 459084568
+      spriteID: e2cd823c979fab34e8e4183779e12409
+      internalID: -1911241826
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_16
+      name: EstructuraCasaDePieraIamgenSola_9
       rect:
         serializedVersion: 2
-        x: 42
-        y: 22
-        width: 42
-        height: 22
+        x: 24
+        y: 31
+        width: 24
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -466,20 +319,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b01adf60f16aa5d4798a502a46c67bbe
-      internalID: -874616193
+      spriteID: 92034738553ea6f4bb982d83687405b3
+      internalID: -1855021767
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_17
+      name: EstructuraCasaDePieraIamgenSola_10
       rect:
         serializedVersion: 2
-        x: 84
-        y: 22
-        width: 42
-        height: 22
+        x: 48
+        y: 31
+        width: 24
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -487,20 +340,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 644abb40f718ba544b9b93bb21684171
-      internalID: -1278555417
+      spriteID: bbda74b234562ea4285db57809ff3c03
+      internalID: -2073996506
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_18
+      name: EstructuraCasaDePieraIamgenSola_11
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 31
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0340fd224f0af9e4fb7da03a969b7c47
+      internalID: 1165831014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EstructuraCasaDePieraIamgenSola_12
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 42
-        height: 22
+        width: 24
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -508,20 +382,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2144f1f073895640b750705c287867e
-      internalID: 927332176
+      spriteID: c006f3334f8b03c458c383c6ef52773c
+      internalID: -1210731241
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_19
+      name: EstructuraCasaDePieraIamgenSola_13
       rect:
         serializedVersion: 2
-        x: 42
+        x: 24
         y: 0
-        width: 42
-        height: 22
+        width: 24
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -529,20 +403,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb2f0ff48c33ed84295a7364d3d6833c
-      internalID: -1020791368
+      spriteID: e5fcfc52e26fbda40a3a9a1489573af1
+      internalID: -405991728
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_20
+      name: EstructuraCasaDePieraIamgenSola_14
       rect:
         serializedVersion: 2
-        x: 84
+        x: 48
         y: 0
-        width: 42
-        height: 22
+        width: 24
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -550,8 +424,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c49197280b411ce49909cca7361125ac
-      internalID: 1399094594
+      spriteID: cfa8b0fd305d2d442adbbfc5aed5db8f
+      internalID: -250164921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EstructuraCasaDePieraIamgenSola_15
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b084cd14476e9f40a8e138e64dac435
+      internalID: -1103221480
       vertices: []
       indices: 
       edges: []
@@ -567,27 +462,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Buttons_18: 927332176
-      Buttons_3: 1887672991
-      Buttons_10: 1670298935
-      Buttons_2: 168487553
-      Buttons_17: -1278555417
-      Buttons_4: -420117939
-      Buttons_7: -155907492
-      Buttons_16: -874616193
-      Buttons_20: 1399094594
-      Buttons_15: 459084568
-      Buttons_6: -862738148
-      Buttons_19: -1020791368
-      Buttons_0: -567975019
-      Buttons_12: 251250032
-      Buttons_14: 1844209984
-      Buttons_5: -1888539536
-      Buttons_1: -1263669668
-      Buttons_13: -1282431938
-      Buttons_8: -1296713258
-      Buttons_9: -1348326158
-      Buttons_11: -592321128
+      EstructuraCasaDePieraIamgenSola_12: -1210731241
+      EstructuraCasaDePieraIamgenSola_15: -1103221480
+      EstructuraCasaDePieraIamgenSola_10: -2073996506
+      EstructuraCasaDePieraIamgenSola_11: 1165831014
+      EstructuraCasaDePieraIamgenSola_14: -250164921
+      EstructuraCasaDePieraIamgenSola_0: 1284151095
+      EstructuraCasaDePieraIamgenSola_2: 694711333
+      EstructuraCasaDePieraIamgenSola_3: 565459514
+      EstructuraCasaDePieraIamgenSola_4: 1645297622
+      EstructuraCasaDePieraIamgenSola_9: -1855021767
+      EstructuraCasaDePieraIamgenSola_6: 1629334934
+      EstructuraCasaDePieraIamgenSola_5: 834946570
+      EstructuraCasaDePieraIamgenSola_13: -405991728
+      EstructuraCasaDePieraIamgenSola_7: -904171070
+      EstructuraCasaDePieraIamgenSola_8: -1911241826
+      EstructuraCasaDePieraIamgenSola_1: -1646597640
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
