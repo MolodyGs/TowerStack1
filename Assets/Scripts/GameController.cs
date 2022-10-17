@@ -4,155 +4,134 @@ using UnityEngine;
 using UnityEngine.UI;
 
 //Contorla el juego en general.
-//--->1. Crea Las estrucutas cuando el jugador haya decidido dejar caer la estrucutra.
-//--->2. Controla el tiempo entre estructuras.
-//--->3. Controla el efecto de que la camara se mueva hacia arriba (Aunque no es así en realidad, las estructuras son las que se mueven).
+//--->1. Crea Las estrucutas cuando el jugador haya decidido dejarla caer.
+//--->2. Controla cuando se puede lanzar una nueva estructura.
+//--->3. Controla que la camara se mueva hacia arriba.
 public class GameController : MonoBehaviour
 {
-    
+
     public static GameController instance;
-    public GameObject Estructura_Grua;      //Referencia de la grua.
-    public GameObject Padre;                //Referencia al gameobject "Estructuras" en la jerarquia.
+    public GameObject Estructura_Grua;      //Referencia de la estructura de la grua.
+    public GameObject Padre;                //Referencia al gameobject "EstructurasApiladas" en la jerarquia.
+
     public GameObject Prefab;               //Prefab de una estructura.
-    private GameObject EstructuraAux;       //Estrucutra creada a la semejanza de un prefab.
+    private GameObject EstructuraAux;       //Auxiliar para la creación de una estructura
+
 
     private bool gameover;
-    private float posiciciont0;
-    private float posiciciont1;
+
+    //Con esto podemos calcular la incercia de la estructura de la grua.
+    private float posicion0;    
+    private float posicion1;
     private float diferencial;
 
     public Camera camara;                   //Referencia a la camara
-
     private Vector3 posicionCamara;
-    public GameObject PantallaGameOver;
 
-    private Animator prefabAnimator;
+    public GameObject PantallaGameOver;     //Referencia al gameObject "GameOver" (Dentro del canvas).
 
-    bool space;                             //Controla cuando hayamos dejado cae un objeto con el espacio (space)
-    
+    bool CorrutinaActiva = false; 
 
-    private void Awake() {
+    private void Awake() 
+    {
 
-        if(instance != null){
-
+        if(instance != null)
+        {
+            
+            Debug.Log("destruyendo instancia GameContoller");
             Destroy(this.transform.gameObject);
-
+            
         }
 
         instance = this;
         
-        posiciciont0 = 0;
-        posiciciont1 = 1;
+
+        posicion1 = Estructura_Grua.transform.position.x;
+        posicion0 = posicion1;
+
         this.posicionCamara = camara.transform.position;
         this.PantallaGameOver.SetActive(false);
         this.gameover = false;
 
     }
-    //Espera 0.75 segundos, luego de esto el jugador podrá dejar caer otra estructura.
-    IEnumerator Time()                      
-    {
-        yield return new WaitForSeconds(0.75f);                 //espera 0.75 segundos.
-        StartCoroutine(CamaraMov(1));                            //Comienza la corrutina "CamaraMov()".
-        Estructura_Grua.SetActive(true);   //Activa la estructura de la grua, para que esta sea visible.         
-        NextBlock();                                  
-
-    }
-    //Mueve la camara hacia arriba (En realidad las estructuras son las que van hacia abajo, dando la ilusion de que la camara sube).
-    //Esto es así porque la camara ve en todo momento al canvas, independientemente de si la camara está en un lugar u otro (Debe haber una forma de hacer esto con la camara misma).
-    IEnumerator CamaraMov(int direccion)      
+ 
+    //Mueve la camara dependiendo de "direccion".
+    IEnumerator CamaraMov(int direccion, float posicionYEstructura)      
     {
 
-        int c = 0; 
-        switch(direccion){
+        //Evitamos que 2 corrutinas se activen al mismo tiempo.
+        while(CorrutinaActiva)
+        {
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        switch(direccion){ 
             
+            //La camara se mueve hacia arriba.
             case 1:
-                //La camara sube 85 unidades hacia arriba. 
-                while(true){
+                
+                CorrutinaActiva = true;
+                float posicionReferencia = posicionYEstructura + 160; 
+                Debug.Log("posicionReferencia " + posicionReferencia);
+                while(true)
+                {
 
-                    c++;
-                    camara.transform.position = new Vector3(camara.transform.position.x, camara.transform.position.y + 1, -10);     //Mueve las estrucutas 1 unidad hacia abajo
-                    if(c == 85){           //If que se activa cuando las estructuras hayan bajado 180 unidades
+                    Debug.Log("Camara MOV " + camara.transform.position.y);
+                    camara.transform.position = new Vector3(camara.transform.position.x, camara.transform.position.y + 1, camara.transform.position.z);     
 
-                        c = 0;
+       
+                    if(camara.transform.position.y >= posicionReferencia)
+                    {          
+                        Debug.Log("brack;");
                         break;
                     }  
-                    yield return new WaitForSeconds(0.001f);        //Espera 1 milisegundo antes de bajar 1 unidad mas, de tal forma que el movimiento se vea suavizado.
+
+                    yield return new WaitForSeconds(0.001f);        
+
                 }
+                CorrutinaActiva = false;
                 break;
 
+            //La camara se mueve hacia abajo.
             case 2:
+
+                CorrutinaActiva = true;
+                Debug.Log("cae");
                 //La camara se mueve hasta la posicion inicial
                 while(true)
                 {
-                    //Debug.Log(posicionCamara[1]);
-                    //Debug.Log("camara" + camara.transform.position.y);
-                    if(camara.transform.position.y == posicionCamara[1])
+                    
+                    if(camara.transform.position.y == posicionCamara.y)
                     {           
                         break;
                     }  
+
                     camara.transform.position = new Vector3(camara.transform.position.x, camara.transform.position.y - 1, -10);
 
                     yield return new WaitForSeconds(0.0025f);    
 
                 }
-                yield return 0;     //Es necesario para que el IEnumerator no de error. necesita que se retorne lo que sea.
+                CorrutinaActiva = false;
+
                 break;
+            }  
+            yield return new WaitForSeconds(0.001f);        //Espera 1 milisegundo antes de bajar 1 unidad mas, de tal forma que el movimiento se vea suavizado.
 
         }
-        yield return 0;
-        
-    }
-
-    //Verifica si "space" ha sido presionado, creando una figura si ese es el caso
-    void Update()
-    {
-
-        //Calculamos la pendiente de la recta tangente a la curva que produce la animacion de la grua (Aproximada).
-        posiciciont0 = posiciciont1;
-        posiciciont1 = Estructura_Grua.transform.parent.transform.position.x;
-        diferencial = posiciciont1 - posiciciont0;
     
-        if(Input.GetKeyDown(KeyCode.Space) && !this.gameover)
-        {
-        
-            if(!this.space && Estructura_Grua.activeSelf)     //Verifica si el espacio fue ya presionado antes.
-            {
-                
-                space = true;
-                int cont = 0;
-
-                int rng = Random.Range(1, 4);
-                
-
-                //Se crea una estructura a partir de un prefab (Encontrado en Assets-> prefab), La estructura se crea justo donde haya estado la estructura de la grua.
-                this.EstructuraAux = Instantiate(Prefab, Estructura_Grua.transform.position,Quaternion.identity);
-                this.EstructuraAux.GetComponent<Rigidbody2D>().AddForce(new Vector2(2000*diferencial, -1000));
-                this.EstructuraAux.transform.SetParent(Padre.transform);                                             //Hacemos que el objeto creado sea hijo del gameobject "Estructuras".
-
-                this.EstructuraAux.GetComponent<Animator>().SetInteger("Skin", rng);
-                this.EstructuraAux.transform.position = new Vector3(EstructuraAux.transform.position.x, EstructuraAux.transform.position.y, 10);
-                cont++;
-
-                this.Estructura_Grua.SetActive(false);                                                          //Desactivamos la estructura de la grua, para que esta sea visible.  
-                StartCoroutine(Time());                                                                         //Comienza la corrutina Time().
-            
-            }
-            
-        }
-
-    }
-
+    //Cuando perdemos, se activa este metodo.
     public void GameOver()
     {
 
-        //Estructura_Grua.transform.parent.transform.SetParent(Estructura_Grua.transform.parent.transform.parent.transform.parent);
         Estructura_Grua.SetActive(false);
         this.gameover = true;
         this.PantallaGameOver.SetActive(true);
-        StartCoroutine(CamaraMov(2));
+        StopCoroutine(CamaraMov(1, 0));
+        StartCoroutine(CamaraMov(2, 0));
 
-        //Cambia todos los RigidBodoys de las estructuras para que estas sean afectadas completamente por la gravedad
-        for(int c = 0; c < Padre.transform.childCount; c++){
+        //Cambia todos los bodyType de los RigidBody's de las estructuras para que éstas sean afectadas completamente por la gravedad (bodytype = Dynamic).
+        for(int c = 0; c < Padre.transform.childCount; c++)
+        {
 
             this.Padre.transform.GetChild(c).GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
 
@@ -160,9 +139,11 @@ public class GameController : MonoBehaviour
 
     }
 
-    public void NextBlock(){
+    //Se puede dejar caer otra estructura.
+    public void NextBlock(float posicionYEstructura){
 
-        this.space = false;
+        StartCoroutine(CamaraMov(1, posicionYEstructura)); 
+        this.Estructura_Grua.SetActive(true);  
 
     }
 
@@ -172,7 +153,39 @@ public class GameController : MonoBehaviour
 
     }
 
+    //Verifica si "space" ha sido presionado, creando una figura si ese es el caso
+    private void Update()
+    {
 
+        //Calculamos la incercia de la estructura anclada a la grua.
+        posicion0 = posicion1;
+        posicion1 = Estructura_Grua.transform.parent.transform.position.x;
+        diferencial = posicion1 - posicion0;
+    
+        //Verificamos si se presiona el espacio y si el juego no ha terminado.
+        if(Input.GetKeyDown(KeyCode.Space) && !this.gameover && Estructura_Grua.activeSelf)
+        {
+        
+            int rng = Random.Range(1, 4);
+            
+            //Se crea una estructura a partir de un prefab (Encontrado en Assets-> prefab), La estructura se crea justo donde haya estado la estructura de la grua.
+            this.EstructuraAux = Instantiate(Prefab, Estructura_Grua.transform.position,Quaternion.identity);
+            this.EstructuraAux.GetComponent<Rigidbody2D>().AddForce(new Vector2(3500*diferencial, -1000));
 
-   
+            //Hacemos que el objeto creado sea hijo del gameobject "EstructurasApiladas".
+            this.EstructuraAux.transform.SetParent(Padre.transform);   
+
+            //Se eligue una "skin" de estructura a azar.                        
+            this.EstructuraAux.GetComponent<Animator>().SetInteger("Skin", rng);
+
+            //Desactivamos la estructura de la grua, para que esta sea invisible.
+            this.Estructura_Grua.SetActive(false);                                                      
+        
+        }
+
+    }
+        
 }
+    
+   
+

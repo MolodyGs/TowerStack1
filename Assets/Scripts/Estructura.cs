@@ -8,49 +8,47 @@ using UnityEngine;
 //--->3. hace que la estructura, que el jugador dejó caer, si es que esta quedó cerca del centro de la estructura base, esta quede entonces exactamente centrada.
 public class Estructura : MonoBehaviour
 {
+
     int cont = 0;
     public Sprite[] particulas;
     public GameObject particula;
 
-    private void Start() {
+    private void Start() 
+    {
         
         this.GetComponent<Animator>().speed = (Random.Range(0.7f, 2));
-        //particula = GameObject.Find("Particula");
 
     }
+
 
     private void OnCollisionEnter2D(Collision2D other) 
     {
 
-        if(GameController.instance.Getgameover())
-        {
-            return;
-        }
 
         MusicManager.instance.estructuraCae();
-
-        Debug.Log(other.gameObject.tag);
 
         if(other.gameObject.tag.Equals("Up"))      //Comprueba si la estructura colisionó con otra estructura.
         {
             
-            //Si hemos entrado a este código, significa que "other" es una estructura (Especificamente la estructura base).
-            //define que tan cerca del centro tiene que haber quedado la estructura para que esta quede centradada.
+            //Si hemos entrado a este código, significa que "other" es una estructura (Especificamente la estructura base o la punta del edificio).
+            //Este if discrimina que tan cerca del centro quedo la estructura para que esta quede completamente centradada (Si +5 y -5 son números más grandes, entonces es más facil centrar la estructura).
             if((this.transform.position.x < other.transform.position.x + 5) && (this.transform.position.x > other.transform.position.x - 5)) 
             {
 
-                this.transform.rotation.Set(0f, 0f, 0f, 0f);                                                            //Cancela cualquier rotación que se haya podido producir.
                 this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;                                     //Deja la estructura sin movimiento alguno
-                this.transform.position = new Vector2(other.transform.position.x, other.transform.position.y + 80);    //Deja la estructura completamente centrada a la estructura base
-                this.transform.rotation.Set(0f, 0f, 0f, 0f);                                                            //Cancela cualquier rotación que se haya podido producir.
+                this.transform.position = new Vector2(other.transform.position.x, other.transform.position.y + 90);     //Deja la estructura completamente centrada a la estructura base
+                this.transform.rotation = Quaternion.Euler(0, 0, 0);                                                    //Cancela cualquier rotación que se haya podido producir.
 
-               for(int c = cont; c < this.transform.parent.childCount; c++, cont = c)
+                //Deja toda la estructura o eficio sin movimiento (BodyType = Static), de tal forma que sea más sencillo seguir construyendo.
+                for(int c = cont; c < this.transform.parent.childCount; c++, cont = c)
                 {
                     
                     this.transform.parent.GetChild(c).GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
 
                 }
+                //Se crean particulas que saldrán eyectadas con el doble de fuerza (2).
                 CrearParticulas(2);
+                //Agregamos un punto para el jugador. (serían 2 puntos, con la linea 89).
                 ScoreManager.instance.AddPoint(1);
                 
             }
@@ -67,40 +65,59 @@ public class Estructura : MonoBehaviour
                 this.transform.GetComponent<Rigidbody2D>().AddForce(new Vector2(-15000,0));
 
             }
-            //Caso donde la estructura no cayó ni cerca del borde, ni cerca del centro.
-            else
+            else    //Caso donde la estructura no cayó ni cerca del borde, ni cerca del centro.
             {
-                
-                this.transform.position = new Vector2(this.transform.position.x, other.transform.position.y + 80);
+                //Esto evita que se vea como las estructuras se atraviensan entre ellas, haciendo que la estructura suba hasta el tope, donde debería estar.
+                this.transform.position = new Vector2(this.transform.position.x, other.transform.position.y + 90);
             
+
             }
 
+            //Con estos tags sabemos que estructura está arriba y cual está abajo.
             other.gameObject.transform.tag = "Down";                //Deja a la estructura base con el Tag "Down".
             this.gameObject.transform.tag = "Up";                   //Deja a la estructura que ha caido con el Tag "Up".
 
-            GameController.instance.NextBlock();
+
+            //Agregamos un punto para el jugador.
             ScoreManager.instance.AddPoint(1);
-           
+
+            //Las estrucuctura ya cayó, entonces damos aviso a que se pueda lanzar otra estructura.
+            GameController.instance.NextBlock(this.transform.position.y);
+
         }
-        CrearParticulas(1);
-        Debug.Log("Destruyendo Script");
-        Destroy(this.gameObject.GetComponent<Estructura>());    //Destruye el script "Estructura.cs", de tal forma que las estructura no realicen acciones cuando colisionen entre ellas.
+        else
+        {
+            //Si estamos aquí, entonces hemos tocado el suelo.
+            GameController.instance.GameOver();
+
+        }
+        
+        //Destruyemos el componente Animator, para que termine de girar la estructura.
         Destroy(this.GetComponent<Animator>());
 
+        //Destruye el script "Estructura.cs", de tal forma que las estructuras no realicen acciones cuando colisionen entre ellas.
+        Destroy(this.GetComponent<Estructura>()); 
+
+        //Independientemente de como haya caido la estructura, se crean particulas al impactar.
+        CrearParticulas(1);
     }
 
-    //Crear particulas con cierta posicion y fuerza.
-    private void CrearParticulas(int Fuerza){
-
-        //Las particulas quedan en una posicion aleatoria.
+    //Crea particulas con cierta posición y fuerza.
+    private void CrearParticulas(int Fuerza)
+    {
+        //Para que las particulas queden en una posición aleatoria.
         float rng = Random.Range(0.25f, 1);
 
-        for(int c = -2; c<3; c++){
+        //Se crean 5 particulas. "int c" Va de -2 a 2 para efectos practicos.
+        for(int c = -2; c<3; c++)
+        {
 
-            //Debug.Log("Creado Particulas");
+            //Crea una particula con un sprite aleatorio.
             particula.GetComponent<SpriteRenderer>().sprite = particulas[Random.Range(0, 10)];
+            //Instalncia la particula justo debajo de la estructura.
             Instantiate(particula, new Vector3(this.transform.position.x + (20*rng*c), this.transform.position.y-60, 0), Quaternion.identity).GetComponent<Rigidbody2D>().AddForce(new Vector2(800*Fuerza*c,1000*Fuerza));
         
+
 
         }
 
