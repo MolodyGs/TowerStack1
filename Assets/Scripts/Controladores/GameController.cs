@@ -34,25 +34,19 @@ public class GameController : MonoBehaviour
 
     private void Awake() 
     {
-
         if(instance != null)
         {
-            
-            Debug.Log("destruyendo instancia GameContoller");
             Destroy(this.transform.gameObject);
-            
         }
 
         instance = this;
         
-
         posicion1 = Estructura_Grua.transform.position.x;
         posicion0 = posicion1;
 
         this.posicionCamara = camara.transform.position;
         this.PantallaGameOver.SetActive(false);
         this.gameover = false;
-
     }
  
     //Mueve la camara dependiendo de "direccion".
@@ -72,17 +66,14 @@ public class GameController : MonoBehaviour
                 
                 CorrutinaActiva = true;
                 float posicionReferencia = posicionYEstructura + 160; 
-                Debug.Log("posicionReferencia " + posicionReferencia);
                 while(true)
                 {
 
-                    Debug.Log("Camara MOV " + camara.transform.position.y);
                     camara.transform.position = new Vector3(camara.transform.position.x, camara.transform.position.y + 1, camara.transform.position.z);     
 
        
                     if(camara.transform.position.y >= posicionReferencia)
                     {          
-                        Debug.Log("brack;");
                         break;
                     }  
 
@@ -96,7 +87,6 @@ public class GameController : MonoBehaviour
             case 2:
 
                 CorrutinaActiva = true;
-                Debug.Log("cae");
                 //La camara se mueve hasta la posicion inicial
                 while(true)
                 {
@@ -170,7 +160,7 @@ public class GameController : MonoBehaviour
             
             //Se crea una estructura a partir de un prefab (Encontrado en Assets-> prefab), La estructura se crea justo donde haya estado la estructura de la grua.
             this.EstructuraAux = Instantiate(Prefab, Estructura_Grua.transform.position,Quaternion.identity);
-            this.EstructuraAux.GetComponent<Rigidbody2D>().AddForce(new Vector2(3500*diferencial, -1000));
+            this.EstructuraAux.GetComponent<Rigidbody2D>().AddForce(new Vector2(4000*diferencial, -1000));
 
             //Hacemos que el objeto creado sea hijo del gameobject "EstructurasApiladas".
             this.EstructuraAux.transform.SetParent(Padre.transform);   

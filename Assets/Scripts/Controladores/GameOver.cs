@@ -17,4 +17,14 @@ public class GameOver : MonoBehaviour
         
     }
 
+    private void Update() {
+        
+        if(Input.GetKeyDown(KeyCode.Space)){
+
+            SceneManager.LoadScene("Game");
+
+        }
+
+    }
+
 }

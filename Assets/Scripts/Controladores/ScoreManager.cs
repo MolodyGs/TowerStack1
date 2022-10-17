@@ -14,7 +14,7 @@ public class ScoreManager : MonoBehaviour
     public Text ScoreAlcanzado;
 
     public int score = 0;
-    public int highscore=0;
+    public int highscore = 0;
 
     bool puntuacionAltaAlcanzada = false;
 
@@ -28,23 +28,24 @@ public class ScoreManager : MonoBehaviour
         }
 
         if(instance == null){
-            Debug.Log("Creando instancia");
+
             instance = this;
             return;
         }
     }
+
     void Start()
     {
         ScoreAlcanzado.gameObject.SetActive(false);
         highscore = PlayerPrefs.GetInt("HighScore", 0);
         scoreText.text = score.ToString() + " PUNTOS";
+
         highScoreText.text = "HIGHSCORE: " + highscore.ToString();
+        highScoreTextInGameOver.text = "HIGHSCORE: " + highscore;
     }
 
-    // Update is called once per frame
     public void AddPoint(int score)
     {
-
         this.score += score;
         scoreText.text = this.score.ToString() + " PUNTOS";
         scoreTextInGameOver.text = scoreText.text;
@@ -53,34 +54,26 @@ public class ScoreManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("HighScore", this.score);
             highScoreTextInGameOver.text = "HIGHSCORE: " + this.score;
-            if(puntuacionAltaAlcanzada){
-                
+
+            if(puntuacionAltaAlcanzada)
+            {    
                 MusicManager.instance.PuntuacionMasAlta();
                 puntuacionAltaAlcanzada = true;
-
             }
-
         }
-
 
         if(this.score == 10 || this.score == 20 || this.score == 50 || this.score == 100)
         {
-
-
             StartCoroutine(ScoreAlcanzadoIE());
-
         }
-
     }
 
     IEnumerator ScoreAlcanzadoIE()
     {
-
         ScoreAlcanzado.text = "Alcanzaste los " + this.score;
         ScoreAlcanzado.transform.gameObject.SetActive(true);
         yield return new WaitForSeconds(3);
         ScoreAlcanzado.transform.gameObject.SetActive(false);
-
     }
 
 }
