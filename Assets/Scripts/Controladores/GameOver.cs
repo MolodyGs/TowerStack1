@@ -6,25 +6,21 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
     
-    public void Reintentar(){
-
+    public void Reintentar()
+    {
         SceneManager.LoadScene("Game");
-
     }
-    public void volverMenu(){
-
+    
+    public void volverMenu()
+    {
         SceneManager.LoadScene("Menu");
-        
     }
 
-    private void Update() {
-        
-        if(Input.GetKeyDown(KeyCode.Space)){
-
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
             SceneManager.LoadScene("Game");
-
         }
-
     }
-
 }

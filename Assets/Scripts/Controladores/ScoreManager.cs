@@ -20,15 +20,13 @@ public class ScoreManager : MonoBehaviour
 
     private void Awake()
     {
-
-        if(instance != null){
-
+        if(instance != null)
+        {
             Destroy(this.transform.gameObject);
-
         }
 
-        if(instance == null){
-
+        if(instance == null)
+        {
             instance = this;
             return;
         }

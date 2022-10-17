@@ -54,7 +54,6 @@ public class MusicManager : MonoBehaviour
         //Carga la continuacion de la musica de fondo
         if (!audioSource.isPlaying) 
         {
-            Debug.Log("Agregando cancion");
             clipQueue.Enqueue(MusicaFondoSinIntro);
             audioSource.clip = clipQueue.Dequeue();
             audioSource.Play();
@@ -68,24 +67,22 @@ public class MusicManager : MonoBehaviour
         efectosDeSonido.volume = volumen;
     } 
 
-
-     public void estructuraCae()
-     {
+    public void estructuraCae()
+    {
         efectosDeSonido.clip = estructuraClip;
         efectosDeSonido.Play();
-     }
+    }
 
-     public void PuntuacionMasAlta()
-     {
+    public void PuntuacionMasAlta()
+    {
         efectosDeSonido.clip = PuntuacionClip;
         efectosDeSonido.Play();
-     }
+    }
 
-     public float getVolumen(){
-
+    public float getVolumen()
+    {
         return audioSource.volume;
-
-     }
+    }
      
  }
 

@@ -10,15 +10,9 @@ public class Suelo : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        
-
         if(other.transform.name.Equals("Particula(Clone)"))
         {
-
             Destroy(other.gameObject);
-
         }
-
     }
-
 }
